@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --PrimaryColor: #f1f9f9;
+    --SecondaryColor: #edffea;
+    --ThirdColor: #063831;
+}
+
+body {
+    background: var(--SecondaryColor);
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    min-width: 100%;
+    position: relative;
+}
+
+.header video {
+    height: 100%;
+    width: 100%;
+}
+
+.header .overlay-video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 1;
+    opacity: .5;
+}
+
+.header .logo {
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+    animation: a-izquierda;
+    animation-duration: 10s;
+}
+
+.header .logo a img {
+    height: 16rem;
+    width: 16rem;
+    position: fixed;
+}
+
+.header h2 {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    z-index: 2;
+    color: var(--SecondaryColor);
+    font-size: 6rem;
+    text-align: center;
+    animation: fade-in;
+    animation-duration: 20s;
+}
+
+.company {
+    text-align: center;
+    margin: 0 0 3rem 0;
+}
+
+.company h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+    color: var(--ThirdColor);
+}
+
+.cambioColor {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.sinColor {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: desaparece;
+    animation-duration: 15s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+}
+
+.sinColor .img-sinColor {
+    background: url(./img/dibujo-mano-ilustracion-concepto-justicia_53876-35572.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sinColor .img-sinColor h2 {
+    font-size: 8rem;
+    color: var(--SecondaryColor);
+}
+
+.conColor {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.conColor .img-conColor {
+    background: url(./img/dibujo-mano-ilustracion-justicia-conecept_53876-40702.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conColor .img-conColor h2{
+    font-size: 8rem;
+    color: var(--SecondaryColor);
+}
+
+.description {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.description img {
+    height: 30rem;
+    border-radius: 80px;
+}
+
+.company p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 3rem;
+    z-index: 1;
+}
+
+.project {
+    text-align: center;
+}
+
+.project h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+    color: var(--ThirdColor);
+}
+
+.project .text-project {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 3rem;
+}
+
+
+
+
+footer {
+    margin-top: 3rem;
+    background: var(--SecondaryColor);
+    text-align: center;
+    padding: 2rem;
+}
+
+footer span {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer .copy {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 0;
+}
+
+.footer {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer .textos {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.footer .textos p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 3rem;
+}
+
+.footer .redes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    margin: 0 3rem;
+    font-weight: 500;
+}
+
+@keyframes a-izquierda {
+    from {
+        left: 45%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparece {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes aparece {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
